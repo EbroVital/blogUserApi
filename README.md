@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 📝 Blog API – Laravel
 
 Une API RESTful de blog développée avec **Laravel**, permettant la gestion des utilisateurs, des articles et des interactions (authentification, publications, etc.).  
@@ -27,6 +27,8 @@ Ce projet est conçu pour servir de **backend** à une application web ou mobile
 - **Laravel Sanctum / Passport** (selon ton choix)
 - **Composer**
 - **Postman** (pour les tests)
+- **Insomnia** (pour les tests)
+
 
 ---
 
@@ -42,12 +44,16 @@ composer install
 ```
 3. **Configurer l’environnement**
  ```bash
+composer install
+```
+3. **Configurer l’environnement**
+```bash
 cp .env.example .env
 php artisan key:generate
 ```
 4. **Configurer la base de données**
 Modifier les informations dans le fichier .env :
- ```bash
+```bash
 DB_DATABASE=blog_api
 DB_USERNAME=root
 DB_PASSWORD=
@@ -57,13 +63,17 @@ DB_PASSWORD=
 php artisan migrate
 ```
 6. **Lancer le serveur**
- ```bash
+```bash
+php artisan migrate
+```
+6. **Lancer le serveur**
+```bash
 php artisan serve
 ```
 ## 🔑 Authentification
 L’API utilise une authentification basée sur token.
 Exemple de header :
- ```bash
+```bash
 Authorization: Bearer VOTRE_TOKEN
 ```
 ## 📌 Endpoints principaux (exemples)
@@ -74,6 +84,8 @@ Authorization: Bearer VOTRE_TOKEN
 | GET     | /api/posts      | Liste des articles   |
 | POST    | /api/posts      | Créer un article     |
 | PUT     | /api/posts/{id} | Modifier un article  |
+| POST    | /api/posts/create      | Créer un article     |
+| PUT     | /api/posts/edit/{id} | Modifier un article  |
 | DELETE  | /api/posts/{id} | Supprimer un article |
 
 ## 🧪 Tests
@@ -81,8 +93,6 @@ Les endpoints peuvent être testés avec :
 - Postman
 - Insomnia
 
-
-=======
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -149,4 +159,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> d585751 (First Commit)
+

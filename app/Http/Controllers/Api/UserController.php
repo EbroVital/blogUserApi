@@ -38,8 +38,13 @@ class UserController extends Controller
 
 
             return response()->json([
+<<<<<<< HEAD
                 'status_code' => 200,
                 'status_message' => 'Utilisateur enregistré avec succès',
+=======
+                'statuts_code' => 200,
+                'statuts_message' => 'Utilisateur enregistré avec succès',
+>>>>>>> c3472895064950c8c6bf3814b4e244e42947fed3
                 'user'=> $user,
                 'token' => $token
             ]);
@@ -53,8 +58,13 @@ class UserController extends Controller
             ]);
 
              return response()->json([
+<<<<<<< HEAD
                 'status_code' => 500,
                 'status_message' => 'Erreur lors de l\'inscription: ' . $e->getMessage(),
+=======
+                'statuts_code' => 500,
+                'statuts_message' => 'Erreur lors de l\'inscription: ' . $e->getMessage(),
+>>>>>>> c3472895064950c8c6bf3814b4e244e42947fed3
                 'error' => $e->getMessage()
             ], 500);
         }
