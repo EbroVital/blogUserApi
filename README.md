@@ -71,8 +71,8 @@ Authorization: Bearer VOTRE_TOKEN
 | POST    | /api/register   | Inscription          |
 | POST    | /api/login      | Connexion            |
 | GET     | /api/posts      | Liste des articles   |
-| POST    | /api/posts      | Créer un article     |
-| PUT     | /api/posts/{id} | Modifier un article  |
+| POST    | /api/posts/create      | Créer un article     |
+| PUT     | /api/posts/edit/{id} | Modifier un article  |
 | DELETE  | /api/posts/{id} | Supprimer un article |
 
 ## 🧪 Tests
